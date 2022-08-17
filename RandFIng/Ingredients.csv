@@ -1,0 +1,42 @@
+Name,Category,Properties
+Milk/cream,Dairy,Vegetarian; animal product
+Cream cheese,Dairy,"Vegetarian; dessert; animal product"
+Mozzarella,Dairy,Vegetarian; animal product
+Gouda cheese,Dairy,Vegetarian; animal product
+Yogurt,Dairy,Vegetarian; dessert; animal product
+Butter,Dairy,Vegetarian; animal product
+Egg,Extra,Vegetarian; animal product
+Mushroom,Extra,Vegan
+Coriander,Extra,Condiment
+Rosemary,Extra,Vegan; condiment
+Chilies,Extra,Vegan;condiment; spicy
+Oregano,Extra,Vegan; condiment
+Mint,Extra,Vegan; condiment; dessert
+Cinnamon,Extra,Condiment; sweet
+Chicken,Protein,Meat
+Beef,Protein,Meat
+Pork,Protein,Meat
+Minced meat,Protein,Meat
+Tourkey,Protein,Meat
+Sweet Potatoes,Staple,Vegan; sweet
+Wheat flour,Staple,Vegan
+Oats,Staple,Vegan; dessert
+Bread,Staple,Vegan
+Rice,Staple,Vegan
+Couscous,Staple,Vegan
+Pasta,Staple,Vegan
+Bok Choy,Vegetable,Vegan
+Cherry Tomatoes,Vegetable,Vegan
+Tomatoes,Vegetable,Vegan
+Onion,Vegetable,Vegan
+Spinach,Vegetable,Vegan
+Lettuce,Vegetable,Vegan
+Leek,Vegetable,Vegan
+Pumpkin,Vegetable,Vegan; sweet
+Garlic,Vegetable,Vegan; condiment
+Cucumber,Vegetable,Vegan
+Sweet corn,Vegetable,Vegan; sweet
+Carrot,Vegetable,Vegan
+Broccoli,Vegetable,Vegan
+Bell pepper,Vegetable,Vegan
+Cabbage,Vegetable,Vegan

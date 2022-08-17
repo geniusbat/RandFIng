@@ -1,24 +1,31 @@
-import enum
-from django.contrib.postgres.fields import ArrayField
+from django_better_admin_arrayfield.models.fields import ArrayField
 from django.db import models
 
 class Categories(models.TextChoices):
-    WILDCARD = "WC", "WILDCARD"
-    DAIRY = "DA", "DAIRY"
-    PROTEIN = "PR", "PROTEIN"
-    STAPLE = "ST", "STAPLE"
+    WILDCARD = "WC", "Wild Card"
+    DAIRY = "DA", "Dairy"
+    PROTEIN = "PR", "Protein"
+    STAPLE = "ST", "Staple"
+    VEGETABLE = "VE", "Vegetable"
+    EXTRA = "EX", "Extra"
 
 class Properties(models.TextChoices):
-    SWEET = "Sweet"
-    SPICY = "Spicy"
-    VEGAN = "Vegan"
-    VEGETARIAN = "Vegetarian"
-    DESSERT = "Dessert"
+    SWEET = "SW" , "Sweet"
+    SPICY = "SP", "Spicy"
+    VEGAN = "VG", "Vegan"
+    VEGETARIAN = "VE", "Vegetarian"
+    DESSERT = "DE", "Dessert"
+    SALTY = "SA", "Salty"
+    FISH = "FI", "Fish"
+    MEAT = "ME", "Meat"
+    ANIMAL_PRODUCT = "AP", "Animal Product"
+    CONDIMENT = "CO", "Condiment"
 
 class Ingredient(models.Model):
     name = models.CharField("Name", max_length=25)
-    category = models.CharField(max_length=2 ,choices=Categories.choices)
-    properties = ArrayField(models.CharField(max_length="15"), blank=True)
+    category = models.CharField(max_length=2 ,choices=Categories.choices, default=Categories.WILDCARD)
+    properties = ArrayField(models.CharField(max_length=3, choices=Properties.choices), blank=True, max_length=15, default=list)
+    
     class Meta:
         verbose_name = ("Ingredient")
         verbose_name_plural = ("Ingredients")
@@ -28,5 +35,13 @@ class Ingredient(models.Model):
         return self.name
 
     @property
-    def category(self):
-        return categories[self.category]
+    def getCategory(self):
+        return self.get_category_display()
+    @property
+    def getProperties(self):
+        ret = []
+        for el in self.properties:
+            for choice in Properties.choices:
+                if choice[0] == el:
+                    ret.append(choice[1])
+        return ret

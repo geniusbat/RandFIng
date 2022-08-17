@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "django.contrib.postgres.fields",
+    "django_better_admin_arrayfield",
     "Ingredients",
 ]
 
