@@ -1,3 +1,18 @@
-{{data}}
-<br>
-{{data.0.getProperties}}
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Tags</th>
+    </tr>
+    {% for ingredient in data %}
+        <tr>
+            <td>{{ ingredient.name |safe}}</td>
+            <td>{{ ingredient.getCategory |safe}}</td>
+            <td>
+                {% for prop in ingredient.getProperties %}
+                    {{prop |safe}}
+                {% endfor %}
+            </td>
+        </tr>
+    {% endfor %}
+</table>

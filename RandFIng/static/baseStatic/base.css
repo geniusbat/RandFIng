@@ -1,0 +1,44 @@
+/*:root {
+
+}*/
+/*Navbar*/
+.navBar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 10vh;
+}
+
+.logo {
+    width: 50%;
+    height: 100%;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    column-gap: calc(1vw + 5px);
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.links > a {
+    text-decoration: none;
+}
+
+.links > a:hover {
+    color: aqua;
+}
+
+.links > a:active {
+    color: yellow;
+}
+
+/*Title*/
+
+.titleContiner {
+    width: 100vw;
+    height: 30vh;
+}
