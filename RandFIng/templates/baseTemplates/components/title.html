@@ -1,6 +1,7 @@
 <!--Css in base.css. TODO: Move here inside style tag-->
 <div class="titleContiner">
     <div class="imageContainer">
-        <img src="media/testImage.jpg" alt="">
+        {% load static %}
+        <img src="{% static 'testImage.jpg' %}" alt="">
     </div>
 </div>

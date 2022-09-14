@@ -24,7 +24,8 @@ def read(fileDir=""):
         "staple" : "ST",
         "protein" : "PR",
         "wild card" : "WC",
-        "vegetable" : "VE"
+        "vegetable" : "VE",
+        "fruit" : "FR"
     }
     properties = {
         "sweet" : "SW",

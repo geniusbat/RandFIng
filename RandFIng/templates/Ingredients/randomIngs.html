@@ -1,0 +1,45 @@
+{% extends 'baseTemplates/base.html' %}
+
+{% block head %}
+    <title>Ingredient List</title>
+{% endblock head %}
+
+{% block content %}
+    {% include "baseTemplates/components/navBar.html" %}
+    <div>
+        <h3>Staples:</h3>
+        <ul>
+            <li>{{data.staple}}</li>
+        </ul>
+        <h3>Vegetables:</h3>
+        <ul>
+            {% if data.vegetables|length == 0 %}<li></li>{% endif %}
+            {% for ing in  data.vegetables%}
+                <li>{{ing}}</li>
+            {% endfor %}
+        </ul>
+        <h3>Protein:</h3>
+        <ul>
+            <li>{{data.protein}}</li>
+        </ul>
+        <h3>Dairy:</h3>
+        <ul>
+            {% if data.dairy|length == 0 %}<li></li>{% endif %}
+            {% for ing in  data.dairy%}
+                <li>{{ing}}</li>
+            {% endfor %}
+        </ul>
+        <h3>Extras:</h3>
+        <ul>
+            <li>{{data.extras}}</li>
+        </ul>
+        <h3>Wild Cards:</h3>
+        <ul>
+            {% if data.wildCards|length == 0 %}<li></li>{% endif %}
+            {% for ing in  data.wildCards%}
+                <li>{{ing}}</li>
+            {% endfor %}
+        </ul>
+        {{ data }}
+    </div>
+{% endblock content %}

@@ -8,6 +8,7 @@ class Categories(models.TextChoices):
     STAPLE = "ST", "Staple"
     VEGETABLE = "VE", "Vegetable"
     EXTRA = "EX", "Extra"
+    FRUIT = "FR", "Fruit"
 
 class Properties(models.TextChoices):
     SWEET = "SW" , "Sweet"
