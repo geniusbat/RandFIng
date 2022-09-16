@@ -19,6 +19,7 @@ class Command(BaseCommand):
 
 def read(fileDir=""):
     categories = {
+        "fruit": "FR",
         "dairy": "DA",
         "extra" : "EX",
         "staple" : "ST",
@@ -41,6 +42,7 @@ def read(fileDir=""):
     }
     if fileDir=="":
         fileDir="ingredients.csv"
+    print(fileDir)
     with open(fileDir) as file:
         reader = csv.reader(file, delimiter=',')
         firstLine = True
@@ -67,4 +69,4 @@ def read(fileDir=""):
                 ing = Ingredient(name=csvName, category=csvCategory, properties=csvProperties)
                 ing.save()
 
-read(r"C:\Users\PC\Documents\Proyectos\Programacion\RandFIng\RandFIng\Ingredients.csv")
+#read(r"C:\Users\PC\Documents\Proyectos\Programacion\RandFIng\RandFIng\Ingredients.csv")

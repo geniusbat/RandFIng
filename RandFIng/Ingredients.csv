@@ -1,6 +1,15 @@
 Name,Category,Properties
 Milk/cream,Dairy,Vegetarian; animal product
-Cream cheese,Dairy,"Vegetarian; dessert; animal product"
+Cream cheese,Dairy,Vegetarian; dessert; animal product
+Mozzarella,Dairy,Vegetarian; animal product
+Gouda cheese,Dairy,Vegetarian; animal product
+Yogurt,Dairy,Vegetarian; dessert; animal product
+Butter,Dairy,Vegetarian; animal product
+Egg,Extra,Vegetarian; animal product
+Mushroom,Extra,Vegan
+Coriander,Extra,CondimentName,Category,Properties
+Milk/cream,Dairy,Vegetarian; animal product
+Cream cheese,Dairy,Vegetarian; dessert; animal product
 Mozzarella,Dairy,Vegetarian; animal product
 Gouda cheese,Dairy,Vegetarian; animal product
 Yogurt,Dairy,Vegetarian; dessert; animal product
@@ -40,3 +49,7 @@ Carrot,Vegetable,Vegan
 Broccoli,Vegetable,Vegan
 Bell pepper,Vegetable,Vegan
 Cabbage,Vegetable,Vegan
+Banana,Fruit,Vegan; sweet
+Mango,Fruit,Vegan; sweet
+Apple,Fruit,Vegan; sweet
+Strawberry,Fruit,Vegan; sweet
