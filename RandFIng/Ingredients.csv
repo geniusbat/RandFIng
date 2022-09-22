@@ -1,55 +1,46 @@
 Name,Category,Properties
-Milk/cream,Dairy,Vegetarian; animal product
-Cream cheese,Dairy,Vegetarian; dessert; animal product
-Mozzarella,Dairy,Vegetarian; animal product
-Gouda cheese,Dairy,Vegetarian; animal product
-Yogurt,Dairy,Vegetarian; dessert; animal product
-Butter,Dairy,Vegetarian; animal product
-Egg,Extra,Vegetarian; animal product
-Mushroom,Extra,Vegan
-Coriander,Extra,CondimentName,Category,Properties
-Milk/cream,Dairy,Vegetarian; animal product
-Cream cheese,Dairy,Vegetarian; dessert; animal product
-Mozzarella,Dairy,Vegetarian; animal product
-Gouda cheese,Dairy,Vegetarian; animal product
-Yogurt,Dairy,Vegetarian; dessert; animal product
-Butter,Dairy,Vegetarian; animal product
-Egg,Extra,Vegetarian; animal product
-Mushroom,Extra,Vegan
-Coriander,Extra,Condiment
-Rosemary,Extra,Vegan; condiment
-Chilies,Extra,Vegan;condiment; spicy
-Oregano,Extra,Vegan; condiment
-Mint,Extra,Vegan; condiment; dessert
-Cinnamon,Extra,Condiment; sweet
-Chicken,Protein,Meat
-Beef,Protein,Meat
-Pork,Protein,Meat
-Minced meat,Protein,Meat
-Tourkey,Protein,Meat
-Sweet Potatoes,Staple,Vegan; sweet
+Milk/cream,Dairy,Vegetarian; animal product; celiac
+Cream cheese,Dairy,Vegetarian; dessert; animal product; celiac
+Mozzarella,Dairy,Vegetarian; animal product; celiac
+Gouda cheese,Dairy,Vegetarian; animal product; celiac
+Yogurt,Dairy,Vegetarian; dessert; animal product; celiac
+Butter,Dairy,Vegetarian; animal product; celiac
+Egg,Extra,Vegetarian; animal product; celiac
+Mushroom,Extra,Vegan; celiac
+Coriander,Extra,Condiment; celiac
+Rosemary,Extra,Vegan; condiment; celiac
+Chilies,Extra,Vegan;condiment; spicy; celiac
+Oregano,Extra,Vegan; condiment; celiac
+Mint,Extra,Vegan; condiment; dessert; celiac
+Cinnamon,Extra,Condiment; sweet; celiac
+Chicken,Protein,Meat; celiac
+Beef,Protein,Meat; celiac
+Pork,Protein,Meat; celiac
+Minced meat,Protein,Meat; celiac
+Tourkey,Protein,Meat; celiac
+Sweet Potatoes,Staple,Vegan; sweet; celiac
 Wheat flour,Staple,Vegan
-Oats,Staple,Vegan; dessert
+Oats,Staple,Vegan; dessert; celiac
 Bread,Staple,Vegan
-Rice,Staple,Vegan
+Rice,Staple,Vegan; celiac
 Couscous,Staple,Vegan
 Pasta,Staple,Vegan
-Bok Choy,Vegetable,Vegan
-Cherry Tomatoes,Vegetable,Vegan
-Tomatoes,Vegetable,Vegan
-Onion,Vegetable,Vegan
-Spinach,Vegetable,Vegan
-Lettuce,Vegetable,Vegan
-Leek,Vegetable,Vegan
-Pumpkin,Vegetable,Vegan; sweet
-Garlic,Vegetable,Vegan; condiment
-Cucumber,Vegetable,Vegan
-Sweet corn,Vegetable,Vegan; sweet
-Carrot,Vegetable,Vegan
-Broccoli,Vegetable,Vegan
-Bell pepper,Vegetable,Vegan
-Cabbage,Vegetable,Vegan
-Banana,Fruit,Vegan; sweet
-Mango,Fruit,Vegan; sweet
-Apple,Fruit,Vegan; sweet
-Strawberry,Fruit,Vegan; sweet
+Bok Choy,Vegetable,Vegan; celiac
+Cherry Tomatoes,Vegetable,Vegan; celiac
+Tomatoes,Vegetable,Vegan; celiac
+Onion,Vegetable,Vegan; celiac
+Spinach,Vegetable,Vegan; celiac
+Lettuce,Vegetable,Vegan; celiac
+Leek,Vegetable,Vegan; celiac
+Pumpkin,Vegetable,Vegan; sweet; celiac
+Garlic,Vegetable,Vegan; condiment; celiac
+Cucumber,Vegetable,Vegan; celiac
+Sweet corn,Vegetable,Vegan; sweet; celiac
+Carrot,Vegetable,Vegan; celiac
+Broccoli,Vegetable,Vegan; celiac
+Bell pepper,Vegetable,Vegan; celiac
+Cabbage,Vegetable,Vegan; celiac
+Banana,Fruit,Vegan; sweet; celiac
+Mango,Fruit,Vegan; sweet; celiac
+Apple,Fruit,Vegan; sweet; celiac
+Strawberry,Fruit,Vegan; sweet; celiac

@@ -38,7 +38,8 @@ def read(fileDir=""):
         "dessert" : "DE",
         "salty" : "SA",
         "meat" : "ME",
-        "fish" : "FI"
+        "fish" : "FI",
+        "celiac" : "CE"
     }
     if fileDir=="":
         fileDir="ingredients.csv"

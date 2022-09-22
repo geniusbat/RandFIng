@@ -1,0 +1,44 @@
+{% extends 'baseTemplates/base.html' %}
+
+{% block head %}
+    <title>Custom Game</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'ingredients/customGame.css' %}">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+{% endblock head %}
+
+{% block content %}
+    {% include "baseTemplates/components/navBar.html" %}
+    <div class="wholeContainer" id="app">
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="omnivoreInput">Omnivore</label>
+                <input type="radio" name="dietType" id="omnivoreInput" value="omnivore" class="form-check-input"> <br>
+                <label for="vegetarianInput">Vegetarian</label>
+                <input type="radio" name="dietType" id="vegetarianInput" value="vegetarian" class="form-check-input" required> <br>
+                <label for="veganInput">Vegan</label>
+                <input type="radio" name="dietType" id="veganInput" value="vegan" class="form-check-input"> <br>
+            </div>
+            <label for="lactoseIntolerantInput" class="mt-1">Lactose Intolerant</label>
+            <input type="checkbox" name="alergies" id="lactoseIntolerantInput" value="lactoseIntolerant" class="form-check-input"> <br>
+            <label for="celiacInput" class="mt-1">Celiac</label>
+            <input type="checkbox" name="alergies" id="celiacInput" value="celiac" class="form-check-input"> <br>
+            <label for="wildCardsInput" class="mt-1">WildCards</label>
+            <input type="checkbox" name="wildCardsInput" id="wildCardsInput" value="wildCardsInput" class="form-check-input" v-model="wildCardsChecked">
+            <input type="number" name="wildCardsAmount" id="wildCardsAmountInput" value="1" min="1" max="5" :disabled="!wildCardsChecked"> <br>
+            <input type="submit" value="Play!" class="btn submitButton mt-3">
+        </form>
+    </div>
+
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data() {
+                return {
+                    wildCardsChecked: false,
+                }
+            }
+        });
+    </script>
+{% endblock content %}

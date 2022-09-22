@@ -2,44 +2,74 @@
 
 {% block head %}
     <title>Ingredient List</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'ingredients/randomThings.css' %}">
 {% endblock head %}
 
 {% block content %}
     {% include "baseTemplates/components/navBar.html" %}
-    <div>
-        <h3>Staples:</h3>
+    <div class="wholeContainer">
+        <div class="gameFloater">
+            Want to apply custom rules or ingredients? <a href="{% url 'customGame' %}">Click here!</a>
+        </div>
+        <h2>The random list of ingredients is:</h2>
+        <h3>Staples</h3>
         <ul>
-            <li>{{data.staple}}</li>
+            {% if data.staple|length == 0 %}<li></li>
+            {% endif %}
+            {% for ing in  data.staple%}
+                <li><span>{{ing}}</span></li>
+            {% endfor %}
         </ul>
-        <h3>Vegetables:</h3>
+        <h3>Vegetables</h3>
         <ul>
             {% if data.vegetables|length == 0 %}<li></li>{% endif %}
             {% for ing in  data.vegetables%}
-                <li>{{ing}}</li>
+                <li><span>{{ing}}</span></li>
             {% endfor %}
         </ul>
-        <h3>Protein:</h3>
+        <h3>Protein</h3>
         <ul>
-            <li>{{data.protein}}</li>
+            {% if data.protein|length == 0 %}<li></li>
+            {% endif %}
+            {% for ing in  data.protein%}
+                <li><span>{{ing}}</span></li>
+            {% endfor %}
         </ul>
-        <h3>Dairy:</h3>
+        <h3>Dairy</h3>
         <ul>
             {% if data.dairy|length == 0 %}<li></li>{% endif %}
             {% for ing in  data.dairy%}
                 <li>{{ing}}</li>
             {% endfor %}
         </ul>
-        <h3>Extras:</h3>
+        <h3>Fruits</h3>
         <ul>
-            <li>{{data.extras}}</li>
+            {% if data.fruits|length == 0 %}<li></li>{% endif %}
+            {% for ing in  data.fruits%}
+                <li>{{ing}}</li>
+            {% endfor %}
         </ul>
-        <h3>Wild Cards:</h3>
+        <h3>Extras</h3>
+        <ul>
+            {% if data.extras|length == 0 %}<li></li>{% endif %}
+            {% for ing in data.extras%}
+                <li>{{ing}}</li>
+            {% endfor %}
+        </ul>
+        <h3>Wild Cards</h3>
         <ul>
             {% if data.wildCards|length == 0 %}<li></li>{% endif %}
             {% for ing in  data.wildCards%}
                 <li>{{ing}}</li>
             {% endfor %}
         </ul>
-        {{ data }}
+        <p>Now go and play!</p>
+        <h4>Remember the rules!</h4>
+        <ul>
+            <li>Create at least a main dish and dessert. Meal can be completed with side dishes and entrees.</li>
+            <li>Can use up to 2 condiments, salt and water whenever deemed necessary.</li>
+            <li>From the ingredients listed, you may ignore one but the other ones must be used at least once.</li>
+        </ul>
     </div>
 {% endblock content %}

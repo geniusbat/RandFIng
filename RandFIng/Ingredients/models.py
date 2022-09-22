@@ -21,6 +21,7 @@ class Properties(models.TextChoices):
     MEAT = "ME", "Meat"
     ANIMAL_PRODUCT = "AP", "Animal Product"
     CONDIMENT = "CO", "Condiment"
+    CELIAC = "CE", "Celiac"
 
 class Ingredient(models.Model):
     name = models.CharField("Name", max_length=25)

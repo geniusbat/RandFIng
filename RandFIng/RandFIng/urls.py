@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from Ingredients.views import indexView, play
+from Ingredients.views import indexView, play, rulesView, customGame
 
 from django.conf import settings
 from django.conf.urls.static import static
@@ -24,7 +24,9 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("ingredients/", include("Ingredients.urls")),
     path("", indexView, name="home"),
-    path("play", play, name="play")
+    path("rules", rulesView, name="rules"),
+    path("play", play, name="play"),
+    path("customGame", customGame, name="customGame"),
 ]
 
 

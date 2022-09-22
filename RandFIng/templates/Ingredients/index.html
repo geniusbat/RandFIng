@@ -5,22 +5,25 @@
 {% endblock head %}
 
 {% block content %}
-    <table>
-        <tr>
-            <th>Name</th>
-            <th>Category</th>
-            <th>Tags</th>
-        </tr>
-        {% for ingredient in data %}
+{% include "baseTemplates/components/navBar.html" %}
+    <div class="wholeContainer">
+        <table>
             <tr>
-                <td>{{ ingredient.name |safe}}</td>
-                <td>{{ ingredient.getCategory |safe}}</td>
-                <td>
-                    {% for prop in ingredient.getProperties %}
-                        {{prop |safe}}
-                    {% endfor %}
-                </td>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Tags</th>
             </tr>
-        {% endfor %}
-    </table>
+            {% for ingredient in data %}
+                <tr>
+                    <td>{{ ingredient.name |safe}}</td>
+                    <td>{{ ingredient.getCategory |safe}}</td>
+                    <td>
+                        {% for prop in ingredient.getProperties %}
+                            {{prop |safe}}
+                        {% endfor %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
 {% endblock content %}

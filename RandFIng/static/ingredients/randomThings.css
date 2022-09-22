@@ -1,0 +1,23 @@
+ul li{
+    font-size: calc(0.35vw + 0.3vh + 13px);
+}
+
+/*Phone*/
+@media (max-width: 600px) {
+    .gameFloater {
+    }
+}
+
+/*Desktop*/
+@media not (max-width: 600px) {
+    .gameFloater {
+        float: right;
+        top: 0px;
+        right: 0px;
+        width: fit-content;
+        height: fit-content;
+        background-color: blanchedalmond;
+        box-shadow: 0px 0px 10px gray;
+        font-size: calc(0.3vw + 0.4vh + 10px);
+    }
+}

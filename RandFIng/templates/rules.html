@@ -1,0 +1,19 @@
+{% extends 'baseTemplates/base.html' %}
+
+{% block head %}
+    <title>Rules</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'rules.css' %}">
+{% endblock head %}
+
+{% block content %}
+    {% include "baseTemplates/components/navBar.html" %}
+    <div class="wholeContainer fit">
+        <h1>Welcome to RandFIng!</h1>
+        <ul>
+            <li>Create at least a main dish and dessert. Meal can be completed with side dishes and entrees.</li>
+            <li>Can use up to 2 condiments, salt and water whenever deemed necessary.</li>
+            <li>From the ingredients listed, you may ignore one but the other ones must be used at least once.</li>
+        </ul>
+    </div>
+{% endblock content %}
