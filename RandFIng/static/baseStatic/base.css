@@ -70,13 +70,15 @@ p {
 /*Navbar*/
 
 /*Phone*/
+/*
+
 @media (max-width: 600px) {
     .navBar {
         padding: 3vh 0vw 1vh 0vw;
     }
 }
-
-/*Desktop*/
+*/
+/*Desktop
 @media not (max-width: 600px) {
     .navBar {
         padding: 3vh 12vw 1vh 12vw;
@@ -124,3 +126,4 @@ p {
 .links > a:active {
     color: black;
 }
+*/

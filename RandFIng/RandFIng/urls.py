@@ -27,9 +27,11 @@ urlpatterns = [
     path("rules", rulesView, name="rules"),
     path("play", play, name="play"),
     path("customGame", customGame, name="customGame"),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 
+'''
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,
                         document_root=settings.MEDIA_ROOT)
+'''
