@@ -1,3 +1,4 @@
 ul li{
-    font-size: calc(0.35vw + 0.3vh + 13px);
+    font-size: calc(0.35vw + 0.3vh + 20px);
+    margin-bottom: 2%;
 }

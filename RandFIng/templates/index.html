@@ -2,6 +2,8 @@
 
 {% block head %}
     <title>RandFIng</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'index.css' %}">
 {% endblock head %}
 
 {% block content %}
@@ -9,8 +11,7 @@
     <div class="wholeContainer fit">
         <h1>Welcome to RandFIng!</h1>
         <p>RandFIng (pronounced "Rand-F-Ing") is a website for those who want to play and be challenged in the kitchen.</p>
-        <p>You are given a list of random ingredients, with which you must create a whole meal (entree if desired, main dish, side dish if desired and dessert).</p>
+        <p>You are given a list of random ingredients, with which you must create a meal.</p>
         <p>To check the rules go <a href="{% url 'rules' %}">here</a>.</p>
-
     </div>
 {% endblock content %}

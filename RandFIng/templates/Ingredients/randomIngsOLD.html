@@ -17,14 +17,9 @@
         <ul>
             {% if data.staple|length == 0 %}<li></li>
             {% endif %}
-            <div class="ingredientsContainer">
-                {% for ing in  data.staple%}
-                <div class="ingredient">
-                    <img src="{% static 'testImage.jpg' %}" alt="">
-                    <div class="ingredient_title">{{ing}}</div>
-                </div>
-                {% endfor %}
-            </div>
+            {% for ing in  data.staple%}
+                <li><span>{{ing}}</span></li>
+            {% endfor %}
         </ul>
         <h3>Vegetables</h3>
         <ul>

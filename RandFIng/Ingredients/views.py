@@ -65,7 +65,9 @@ def play(request, options={"diet":"","alergies":[],"wildCards":0}):
         extras = extras.filter(properties__contains=[tag])
     if extras.count()>0:
         for i in range(extrasQ):
-            extrasChosen.append(extras[rd.randint(0,extras.count()-1)])
+            chosen = extras[rd.randint(0,extras.count()-1)]
+            if not chosen in extrasChosen:
+                extrasChosen.append(chosen)
     #Choosing protein
     proteins = allIngs.filter(category=Categories.PROTEIN)
     for tag in tags:

@@ -81,9 +81,9 @@ WSGI_APPLICATION = "RandFIng.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.environ.setdefault('RANDFING_DB', "ff"),
-        'USER': os.environ.setdefault('RANDFING_USER', "ff"),
-        'PASSWORD': os.environ.setdefault('RANDFING_PASS', "ff"),
+        'NAME': os.getenv('RANDFING_DB', "ff"),
+        'USER': os.getenv('RANDFING_USER', "ff"),
+        'PASSWORD': os.getenv('RANDFING_PASS', "ff"),
         'HOST': 'localhost',
         'PORT': '5432',
     }
