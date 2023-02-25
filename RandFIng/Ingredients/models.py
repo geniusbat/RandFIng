@@ -27,6 +27,7 @@ class Ingredient(models.Model):
     name = models.CharField("Name", max_length=25)
     category = models.CharField(max_length=2 ,choices=Categories.choices, default=Categories.WILDCARD)
     properties = ArrayField(models.CharField(max_length=3, choices=Properties.choices), blank=True, max_length=15, default=list)
+    image = models.ImageField(upload_to="ingredients/", height_field=None, width_field=None, max_length=None)
     
     class Meta:
         verbose_name = ("Ingredient")

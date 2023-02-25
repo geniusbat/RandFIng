@@ -20,7 +20,7 @@
             <div class="ingredientsContainer">
                 {% for ing in  data.staple%}
                 <div class="ingredient">
-                    <img src="{% static 'testImage.jpg' %}" alt="">
+                    <img src="{{ ing.image.url }}" alt="">
                     <div class="ingredient_title">{{ing}}</div>
                 </div>
                 {% endfor %}
@@ -28,46 +28,78 @@
         </ul>
         <h3>Vegetables</h3>
         <ul>
-            {% if data.vegetables|length == 0 %}<li></li>{% endif %}
-            {% for ing in  data.vegetables%}
-                <li><span>{{ing}}</span></li>
-            {% endfor %}
+            {% if data.vegetables|length == 0 %}<li></li>
+            {% endif %}
+            <div class="ingredientsContainer">
+                {% for ing in  data.vegetables%}
+                <div class="ingredient">
+                    <img src="{{ ing.image.url }}" alt="">
+                    <div class="ingredient_title">{{ing}}</div>
+                </div>
+                {% endfor %}
+            </div>
         </ul>
         <h3>Protein</h3>
         <ul>
+            
             {% if data.protein|length == 0 %}<li></li>
             {% endif %}
-            {% for ing in  data.protein%}
-                <li><span>{{ing}}</span></li>
-            {% endfor %}
+            <div class="ingredientsContainer">
+                {% for ing in  data.protein%}
+                <div class="ingredient">
+                    <img src="{{ ing.image.url }}" alt="">
+                    <div class="ingredient_title">{{ing}}</div>
+                </div>
+                {% endfor %}
+            </div>
         </ul>
         <h3>Dairy</h3>
         <ul>
             {% if data.dairy|length == 0 %}<li></li>{% endif %}
-            {% for ing in  data.dairy%}
-                <li>{{ing}}</li>
-            {% endfor %}
+            <div class="ingredientsContainer">
+                {% for ing in  data.dairy%}
+                <div class="ingredient">
+                    <img src="{{ ing.image.url }}" alt="">
+                    <div class="ingredient_title">{{ing}}</div>
+                </div>
+                {% endfor %}
+            </div>
         </ul>
         <h3>Fruits</h3>
         <ul>
             {% if data.fruits|length == 0 %}<li></li>{% endif %}
-            {% for ing in  data.fruits%}
-                <li>{{ing}}</li>
-            {% endfor %}
+            <div class="ingredientsContainer">
+                {% for ing in  data.fruits%}
+                <div class="ingredient">
+                    <img src="{{ ing.image.url }}" alt="">
+                    <div class="ingredient_title">{{ing}}</div>
+                </div>
+                {% endfor %}
+            </div>
         </ul>
         <h3>Extras</h3>
         <ul>
             {% if data.extras|length == 0 %}<li></li>{% endif %}
-            {% for ing in data.extras%}
-                <li>{{ing}}</li>
-            {% endfor %}
+            <div class="ingredientsContainer">
+                {% for ing in  data.extras%}
+                <div class="ingredient">
+                    <img src="{{ ing.image.url }}" alt="">
+                    <div class="ingredient_title">{{ing}}</div>
+                </div>
+                {% endfor %}
+            </div>
         </ul>
         <h3>Wild Cards</h3>
         <ul>
             {% if data.wildCards|length == 0 %}<li></li>{% endif %}
-            {% for ing in  data.wildCards%}
-                <li>{{ing}}</li>
-            {% endfor %}
+            <div class="ingredientsContainer">
+                {% for ing in  data.wildCards%}
+                <div class="ingredient">
+                    <img src="{{ ing.image.url }}" alt="">
+                    <div class="ingredient_title">{{ing}}</div>
+                </div>
+                {% endfor %}
+            </div>
         </ul>
         <p>Now go and play!</p>
         <h4>Remember the rules!</h4>

@@ -1,5 +1,5 @@
 import random as rd
-from unicodedata import category
+from unicodedata import category, name
 from django.shortcuts import redirect, render
 from .models import *
 from .forms import *
@@ -31,10 +31,14 @@ def play(request, options={"diet":"","alergies":[],"wildCards":0}):
     if "celiac" in options["alergies"]:
         tags.append("CE")
     allIngs = Ingredient.objects.all()
+
     staples = allIngs.filter(category=Categories.STAPLE)
     for tag in tags:
         staples = staples.filter(properties__contains=[tag])
     staplesChosen = [staples[rd.randint(0,staples.count()-1)]]
+    '''
+    staplesChosen = [allIngs.filter(name="Apple").first()]
+    '''
     #Choosing dairy
     dairiesChosen = []
     if not "lactoseIntolerant" in options["alergies"]:

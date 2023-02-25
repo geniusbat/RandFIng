@@ -2,6 +2,8 @@ from django.core.management.base import BaseCommand, CommandError
 
 import csv
 from Ingredients.models import Categories, Properties, Ingredient
+from django.conf import settings
+from pathlib import Path
 
 class Command(BaseCommand):
     help = 'Command to add ingredients from csv'
@@ -18,6 +20,7 @@ class Command(BaseCommand):
         self.stdout.write(self.style.SUCCESS("Finished succesfully!"))
 
 def read(fileDir=""):
+    BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
     categories = {
         "fruit": "FR",
         "dairy": "DA",
@@ -68,6 +71,11 @@ def read(fileDir=""):
                         print("ALERT!: "+str(prop)+" not found")
                 print("{}, {}, {}".format(csvName, csvCategory, csvProperties))
                 ing = Ingredient(name=csvName, category=csvCategory, properties=csvProperties)
+                if row[3].strip() != "":
+                    p = "\\ingredients\\" + row[3].strip() + ".jpg"
+                else:
+                    p =  "\\ingredients\\" + csvName.lower() + ".jpg"
+                ing.image = p
                 ing.save()
 
 #read(r"C:\Users\PC\Documents\Proyectos\Programacion\RandFIng\RandFIng\Ingredients.csv")

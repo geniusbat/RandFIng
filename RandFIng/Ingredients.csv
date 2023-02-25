@@ -1,46 +1,50 @@
-Name,Category,Properties
-Milk/cream,Dairy,Vegetarian; animal product; celiac
-Cream cheese,Dairy,Vegetarian; dessert; animal product; celiac
-Mozzarella,Dairy,Vegetarian; animal product; celiac
-Gouda cheese,Dairy,Vegetarian; animal product; celiac
-Yogurt,Dairy,Vegetarian; dessert; animal product; celiac
-Butter,Dairy,Vegetarian; animal product; celiac
-Egg,Extra,Vegetarian; animal product; celiac
-Mushroom,Extra,Vegan; celiac
-Coriander,Extra,Condiment; celiac
-Rosemary,Extra,Vegan; condiment; celiac
-Chilies,Extra,Vegan;condiment; spicy; celiac
-Oregano,Extra,Vegan; condiment; celiac
-Mint,Extra,Vegan; condiment; dessert; celiac
-Cinnamon,Extra,Condiment; sweet; celiac
-Chicken,Protein,Meat; celiac
-Beef,Protein,Meat; celiac
-Pork,Protein,Meat; celiac
-Minced meat,Protein,Meat; celiac
-Tourkey,Protein,Meat; celiac
-Sweet Potatoes,Staple,Vegan; sweet; celiac
-Wheat flour,Staple,Vegan
-Oats,Staple,Vegan; dessert; celiac
-Bread,Staple,Vegan
-Rice,Staple,Vegan; celiac
-Couscous,Staple,Vegan
-Pasta,Staple,Vegan
-Bok Choy,Vegetable,Vegan; celiac
-Cherry Tomatoes,Vegetable,Vegan; celiac
-Tomatoes,Vegetable,Vegan; celiac
-Onion,Vegetable,Vegan; celiac
-Spinach,Vegetable,Vegan; celiac
-Lettuce,Vegetable,Vegan; celiac
-Leek,Vegetable,Vegan; celiac
-Pumpkin,Vegetable,Vegan; sweet; celiac
-Garlic,Vegetable,Vegan; condiment; celiac
-Cucumber,Vegetable,Vegan; celiac
-Sweet corn,Vegetable,Vegan; sweet; celiac
-Carrot,Vegetable,Vegan; celiac
-Broccoli,Vegetable,Vegan; celiac
-Bell pepper,Vegetable,Vegan; celiac
-Cabbage,Vegetable,Vegan; celiac
-Banana,Fruit,Vegan; sweet; celiac
-Mango,Fruit,Vegan; sweet; celiac
-Apple,Fruit,Vegan; sweet; celiac
-Strawberry,Fruit,Vegan; sweet; celiac
+Name,Category,Properties,Img
+Milk/cream,Dairy,Vegetarian; animal product; celiac,milk
+Cream cheese,Dairy,Vegetarian; dessert; animal product; celiac,cheese
+Mozzarella,Dairy,Vegetarian; animal product; celiac,cheese
+Gouda cheese,Dairy,Vegetarian; animal product; celiac,cheese
+Yogurt,Dairy,Vegetarian; dessert; animal product; celiac,
+Butter,Dairy,Vegetarian; animal product; celiac,
+Egg,Extra,Vegetarian; animal product; celiac,
+Mushroom,Extra,Vegan; celiac,
+Coriander,Extra,Condiment; celiac,spices
+Rosemary,Extra,Vegan; condiment; celiac,spices
+Chilies,Extra,Vegan;condiment; spicy; celiac,spices
+Oregano,Extra,Vegan; condiment; celiac,spices
+Mint,Extra,Vegan; condiment; dessert; celiac,
+Sugar,,,
+Brown sugar,,,sugar
+Syrup,,,sugar
+Honey,,,
+Cinnamon,Extra,Condiment; sweet; celiac,spices
+Chicken,Protein,Meat; celiac,meat
+Beef,Protein,Meat; celiac,meat
+Pork,Protein,Meat; celiac,meat
+Minced meat,Protein,Meat; celiac,meat
+Tourkey,Protein,Meat; celiac,meat
+Potato,Staple,Vegan; sweet; celiac,potatoes
+Wheat flour,Staple,Vegan,wheatFlour
+Oats,Staple,Vegan; dessert; celiac,wheat
+Bread,Staple,Vegan,wheat
+Rice,Staple,Vegan; celiac,wheat
+Couscous,Staple,Vegan,wheat
+Pasta,Staple,Vegan,wheat
+Bok Choy,Vegetable,Vegan; celiac,bokChoy
+Cherry Tomatoes,Vegetable,Vegan; celiac,cherryTomatoes
+Tomatoes,Vegetable,Vegan; celiac,vegetables
+Onion,Vegetable,Vegan; celiac,vegetables
+Spinach,Vegetable,Vegan; celiac,vegetables
+Lettuce,Vegetable,Vegan; celiac,vegetables
+Leek,Vegetable,Vegan; celiac,vegetables
+Pumpkin,Vegetable,Vegan; sweet; celiac,vegetables
+Garlic,Vegetable,Vegan; condiment; celiac,vegetables
+Cucumber,Vegetable,Vegan; celiac,vegetables
+Sweet corn,Vegetable,Vegan; sweet; celiac,vegetables
+Carrot,Vegetable,Vegan; celiac,vegetables
+Broccoli,Vegetable,Vegan; celiac,vegetables
+Bell pepper,Vegetable,Vegan; celiac,vegetables
+Cabbage,Vegetable,Vegan; celiac,vegetables
+Banana,Fruit,Vegan; sweet; celiac,fruits
+Mango,Fruit,Vegan; sweet; celiac,fruits
+Apple,Fruit,Vegan; sweet; celiac,fruits
+Strawberry,Fruit,Vegan; sweet; celiac,fruits
