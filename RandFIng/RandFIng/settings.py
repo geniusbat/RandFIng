@@ -26,11 +26,11 @@ SECRET_KEY = os.environ.setdefault('RANDFING_KEY', "django-insecure-&$+2#rgeg)ck
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.setdefault('RANDFING_DEBUG', "False")
 
-ALLOWED_HOSTS = ["*"]
+#ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = [".randfing.", "localhost"]
 
 
 # Application definition
-
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -120,7 +120,7 @@ USE_TZ = True
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-STATIC_URL = 'http://localhost:8000/static/'
+STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), os.path.join(BASE_DIR, 'media')]
 
