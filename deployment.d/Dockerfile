@@ -7,9 +7,6 @@ WORKDIR /RandFIng
 ENV PYTHONUNBUFFERED=1
 ENV RANDFING_KEY=""
 ENV RANDFING_DEBUG=True
-ENV RANDFING_DB=""
-ENV RANDFING_USER=""
-ENV RANDFING_PASS=""
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt

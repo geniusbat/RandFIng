@@ -24,7 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.setdefault('RANDFING_KEY', "django-insecure-&$+2#rgeg)ck6fpuzu2h$1@s6uwge66m45=#xf#-jcj1#*kljt")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.setdefault('RANDFING_DEBUG', "False")
+if os.environ.setdefault('RANDFING_DEBUG', "False") == "True":
+    DEBUG = False
+else:
+    DEBUG = True
 
 #ALLOWED_HOSTS = ["*"]
 ALLOWED_HOSTS = [".randfing.", "localhost"]
@@ -77,7 +80,7 @@ WSGI_APPLICATION = "RandFIng.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -86,6 +89,12 @@ DATABASES = {
         'PASSWORD': os.getenv('RANDFING_PASS', "ff"),
         'HOST': 'localhost',
         'PORT': '5432',
+    }
+}'''
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
     }
 }
 
