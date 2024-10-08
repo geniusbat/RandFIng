@@ -35,7 +35,9 @@ def play(request, options={"diet":"","alergies":[],"wildCards":0}):
     staples = allIngs.filter(category=Categories.STAPLE)
     for tag in tags:
         staples = staples.filter(properties__contains=[tag])
-    staplesChosen = [staples[rd.randint(0,staples.count()-1)]]
+    staplesChosen = []
+    if len(staples)>0:
+        staplesChosen = [staples[rd.randint(0,staples.count()-1)]] 
     '''
     staplesChosen = [allIngs.filter(name="Apple").first()]
     '''
@@ -57,10 +59,11 @@ def play(request, options={"diet":"","alergies":[],"wildCards":0}):
     for tag in tags:
         vegetables = vegetables.filter(properties__contains=[tag])
     vegetablesChosen = []
-    while len(vegetablesChosen) < vegetableQ and vegetableQ!=0 and len(vegetables)!=0:
-        chosen = vegetables[rd.randint(0,vegetables.count()-1)]
-        if not chosen in vegetablesChosen:
-            vegetablesChosen.append(chosen)
+    if len(vegetables)>0:
+        while len(vegetablesChosen) < vegetableQ and vegetableQ!=0 and len(vegetables)!=0:
+            chosen = vegetables[rd.randint(0,vegetables.count()-1)]
+            if not chosen in vegetablesChosen:
+                vegetablesChosen.append(chosen)
     #Choosing extras
     extrasChosen = []
     extrasQ = rd.randint(0,4) + 1-dairyQ
@@ -77,7 +80,7 @@ def play(request, options={"diet":"","alergies":[],"wildCards":0}):
     for tag in tags:
         proteins = proteins.filter(properties__contains=[tag])
     proteinsChosen = []
-    if len(proteins)!=0:
+    if len(proteins)>0:
         proteinsChosen.append(proteins[rd.randint(0,proteins.count()-1)])
     #Choosing wildcards TODO: wildcard tags
     wildcards = allIngs.filter(category=Categories.WILDCARD)
@@ -91,18 +94,20 @@ def play(request, options={"diet":"","alergies":[],"wildCards":0}):
     for tag in tags:
         condiments = condiments.filter(properties__contains=[tag])
     condimentsChosen = []
-    while len(condimentsChosen) < condimetsQ and condimetsQ!=0 and len(condiments)!=0:
-        chosen = condiments[rd.randint(0,condiments.count()-1)]
-        if not chosen in condimentsChosen:
-            condimentsChosen.append(chosen)
+    if condiments.count()>0:
+        while len(condimentsChosen) < condimetsQ and condimetsQ!=0 and len(condiments)!=0:
+            chosen = condiments[rd.randint(0,condiments.count()-1)]
+            if not chosen in condimentsChosen:
+                condimentsChosen.append(chosen)
     #Fruits
     fruitsChosen = []
     fruitsQ = rd.randint(0,3)
     fruits = allIngs.filter(category=Categories.FRUIT)
-    for tag in tags:
-        fruits = fruits.filter(properties__contains=[tag])
-    for i in range(fruitsQ):
-        fruitsChosen.append(fruits[rd.randint(0,fruits.count()-1)])
+    if fruits.count()>0:
+        for tag in tags:
+            fruits = fruits.filter(properties__contains=[tag])
+        for i in range(fruitsQ):
+            fruitsChosen.append(fruits[rd.randint(0,fruits.count()-1)])
     selection = {
         "staple" : staplesChosen,
         "vegetables" : vegetablesChosen,

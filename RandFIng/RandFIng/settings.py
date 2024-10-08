@@ -30,7 +30,7 @@ else:
     DEBUG = True
 
 #ALLOWED_HOSTS = ["*"]
-ALLOWED_HOSTS = [".randfing.", "localhost"]
+ALLOWED_HOSTS = [".randfing.", "localhost", "127.0.0.1"]
 
 
 # Application definition
@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "django.contrib.postgres.fields",
     "django_better_admin_arrayfield",
+    "django.contrib.sites", #So sitemaps.xml work
+    "django.contrib.sitemaps", #So sitemaps.xml work
     "Ingredients",
 ]
 
@@ -56,6 +58,8 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
+
+SITE_ID = 1 #So sitemaps.xml work
 
 ROOT_URLCONF = "RandFIng.urls"
 
@@ -76,7 +80,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = "RandFIng.wsgi.application"
-
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
